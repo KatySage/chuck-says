@@ -4,18 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chuck Norris</title>
     <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
-    <p id="chuckSays">
+    <div class="wrapper">
+    <p id="chuckSays">Chuck says...
     </p>
+    </div>
     <button id='refreshQuote'>Refresh Quote</button>
-    <form>
-        <label></label>
-    </form>
-</body>
 
-<scripts src="js/index.js"></scripts>
+    <br>
+
+<div class="runner"><img style="repeat-x;height: 30px;" src="/Users/katysage/DigitalCrafts/practice/week_5/chuck/images/hat.png"></div>
+    <form>
+        <label>
+            CHOOSE A CATEGORY: 
+            <input type='text' value='' id='categoryInput' required placeholder='Type a category name'>
+        </label>
+        <button type='submit' id='submitForm'>Get a quote</button>
+        
+    </form>
+    
+</body>
+<script src="js/get.js"></script>
+<script src="js/index.js"></script>
 </html>
