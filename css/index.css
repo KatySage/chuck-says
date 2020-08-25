@@ -80,3 +80,53 @@ form {
     color: white;
     font-size: 1.2rem;
 }
+.themered {
+    --radius: 2em;
+    --baseFg: black;
+    --baseBg: #191919;
+    --accentFg: #191919;
+    --accentBg: #272727;
+}
+
+select {
+    font: inherit;
+    text-transform: uppercase;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    align-content: center;
+    color: white;
+    border: 2px solid var(--baseFg);
+    line-height: 1;
+    outline: 0;
+    padding: 0.65em 1.9em 0.65em 0.75em;
+    border-radius: 10px;
+    background-color: var(--baseBg);
+    background-image: 
+        linear-gradient(var(--baseFg), var(--baseFg)),
+        linear-gradient(-135deg, transparent 50%, var(--accentBg) 50%),
+        linear-gradient(-225deg, transparent 50%, var(--accentBg) 50%),
+        linear-gradient(var(--accentBg) 42%, var(--accentFg) 42%);
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: 1px 100%, 20px 22px, 20px 22px, 20px 100%;
+    background-position: right 20px center, right bottom, right bottom, right bottom;   
+}
+
+select:hover {
+    background-image: 
+        linear-gradient(var(--accentFg), var(--accentFg)),
+        linear-gradient(-135deg, transparent 50%, var(--accentFg) 50%),
+        linear-gradient(-225deg, transparent 50%, var(--accentFg) 50%),
+        linear-gradient(var(--accentFg) 42%, var(--accentBg) 42%);
+}
+
+select:active {
+    background-image: 
+        linear-gradient(var(--accentFg), var(--accentFg)),
+        linear-gradient(-135deg, transparent 50%, var(--accentFg) 50%),
+        linear-gradient(-225deg, transparent 50%, var(--accentFg) 50%),
+        linear-gradient(var(--accentFg) 42%, var(--accentBg) 42%);
+    color: var(--accentBg);
+    border-color: var(--accentFg);
+    background-color: var(--accentFg);
+}
