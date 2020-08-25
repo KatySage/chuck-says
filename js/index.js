@@ -18,27 +18,30 @@ const getCategories = () => {
     get(url).then(function (categoryArray){
         categoryArray.map(function (category){
             const categoryOption = document.createElement('option')
-            if (category != 'explicit'){
+            if (category != 'explicit' && category != 'religion' && category !='political'){
                 categoryOption.value = category;
-                categoryOption.text = category;
-                dropdownMenu.append(categoryOption); }
+            categoryOption.text = category;
+            dropdownMenu.append(categoryOption);
 
-        }); 
+        }; 
     });
-}
+})}
 getCategories()
+
 myButton.addEventListener('click', function (e) {
         e.preventDefault();
         getQuote(defaultCategory);
 })
 
-submitForm.addEventListener('click', function (e) {
+const getChuckQuotes = document.getElementById('getChuckQuotes');
+
+getChuckQuotes.addEventListener('submit', e => {
     e.preventDefault();
     const userInput = document.getElementById("categoryInput");
     const category = userInput.value;
     getQuote(category);
-
 });
+
 (function () {
     getQuote(defaultCategory)
 })();
