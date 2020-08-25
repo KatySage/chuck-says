@@ -53,8 +53,6 @@ modalCloseButton.addEventListener('click', function(e) {
     getQuote()
 })();
 
-const modalContent = document.querySelector('.modal-content')
-
 window.onclick = function(event) {
     if (event.target == modalOverlay) {
         modalOverlay.classList.toggle('open');
