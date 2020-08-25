@@ -9,26 +9,28 @@
 </head>
 <body>
     <div class="wrapper">
-    <p id="chuckSays">Chuck says...
-    </p>
-    </div>
-    <button id='refreshQuote'>Refresh Quote</button>
+        <div class="img-wrapper">
+            <img src="images/pngwave.png">
+        </div>
+        <button id='refreshQuote'>Refresh Quote</button>
+        <br>
+        <form id = "getChuckQuotes">
+            <label>
+                CHOOSE A CATEGORY:  
+                <select class="themered" id='categoryInput' name='categoryInput'>
 
-    <br>
-
-<div class="runner"><img style="repeat-x;height: 30px;" src="/Users/katysage/DigitalCrafts/practice/week_5/chuck/images/hat.png"></div>
-    <form id = "getChuckQuotes">
-        <label>
-            CHOOSE A CATEGORY:  
-            <select class="themered" id='categoryInput' name='categoryInput'>
-
-            </select>
-        </label>
+                </select>
+            </label>
         <button type='submit' id='submitForm'>Get a quote</button>
         
-    </form>
-    <div class="runner"><img style="repeat-x;height: 30px;" src="/Users/katysage/DigitalCrafts/practice/week_5/chuck/images/hat.png"></div>
-    
+        </form>
+    </div>
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <p id="chuckSays">Chuck says...
+            </p>
+        </div>
+    </div>
 </body>
 <script src="js/get.js"></script>
 <script src="js/index.js"></script>

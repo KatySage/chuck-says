@@ -15,18 +15,17 @@ body {
 
 }
 .wrapper {
-    background-image: url("/Users/katysage/DigitalCrafts/practice/week_5/chuck/images/pngwave2.png");
-    width: 870px;
-    height: 570px;
-    display: grid;
-    grid-template-rows: 2fr 1fr;
-    grid-template-columns: 3fr 1.75fr .25fr;
+    margin: 0 auto;
+    max-width: 60rem;
+    width: 100%;
 }
-.wrapper > img {
+.img-wrapper {
+    width: 100%;
+}
+.img-wrapper img {
     height: auto;
     width: 100%;
 }
-
 
 button{
     background: black;
@@ -55,11 +54,6 @@ button {
     height: 100%;
     background: #272727;
 }
-.runner{
-        background-repeat: repeat-x;
-        background-image: url("/Users/katysage/DigitalCrafts/practice/week_5/chuck/images/hat.png");
-        height:31px
-}  
 p {
     grid-row: 1 / 1;
     grid-column: 2 / 2;
@@ -73,7 +67,6 @@ form {
     display: flex;
     flex-direction: row;
     flex-basis: auto;
-    justify-content: flex-end;
     align-items: center;
     padding: 16px;
     background: black;
@@ -129,4 +122,9 @@ select:active {
     color: var(--accentBg);
     border-color: var(--accentFg);
     background-color: var(--accentFg);
+}
+
+.modal-overlay {
+    position: absolute;
+    
 }
