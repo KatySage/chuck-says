@@ -1,11 +1,11 @@
 'use strict';
+
 const myButton = document.getElementById('refreshQuote');
 const chuckSays = document.getElementById('chuckSays');
 const submitForm = document.getElementById('submitForm');
-const defaultCategory = "dev"
+let category = "dev"
 
-//function getQuote(category){}
-const getQuote = (category) => {
+const getQuote = () => {
     const url = `https://api.chucknorris.io/jokes/random?category=${category}`;
     get(url).then(function (fetchResponse){
         chuckSays.innerHTML = fetchResponse.value;
@@ -30,7 +30,7 @@ getCategories()
 
 myButton.addEventListener('click', function (e) {
         e.preventDefault();
-        getQuote(defaultCategory);
+        getQuote();
 })
 
 const getChuckQuotes = document.getElementById('getChuckQuotes');
@@ -38,11 +38,11 @@ const getChuckQuotes = document.getElementById('getChuckQuotes');
 getChuckQuotes.addEventListener('submit', e => {
     e.preventDefault();
     const userInput = document.getElementById("categoryInput");
-    const category = userInput.value;
-    getQuote(category);
+    category = userInput.value;
+    getQuote();
 });
 
 (function () {
-    getQuote(defaultCategory)
+    getQuote()
 })();
 
