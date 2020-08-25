@@ -10,14 +10,14 @@
 <body>
     <div class="wrapper">
         <div class="img-wrapper">
-            <img src="images/pngwave.png">
+            <img src="images/pngwave1.png">
         </div>
         <button id='refreshQuote'>Refresh Quote</button>
         <br>
         <form id = "getChuckQuotes">
             <label>
                 CHOOSE A CATEGORY:  
-                <select class="themered" id='categoryInput' name='categoryInput'>
+                <select class="theme-red" id='categoryInput' name='categoryInput'>
 
                 </select>
             </label>
@@ -27,6 +27,7 @@
     </div>
     <div class="modal-overlay">
         <div class="modal-content">
+            <span id="closeModal" class="modal-close"><img src="images/hat.png"></span>
             <p id="chuckSays">Chuck says...
             </p>
         </div>
