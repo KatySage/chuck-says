@@ -20,7 +20,8 @@ body {
     width: 100%;
 }
 .img-wrapper {
-    width: 100%;
+    width: 65%;
+    margin: 0 auto;
 }
 .img-wrapper img {
     height: auto;
@@ -66,14 +67,13 @@ p {
 form {
     display: flex;
     flex-direction: row;
-    flex-basis: auto;
-    align-items: center;
+    margin: 0 auto;
     padding: 16px;
     background: black;
     color: white;
     font-size: 1.2rem;
 }
-.themered {
+.theme-red {
     --radius: 2em;
     --baseFg: black;
     --baseBg: #191919;
@@ -125,6 +125,39 @@ select:active {
 }
 
 .modal-overlay {
+    background-color: rgba(0, 0, 0, .7);
+    bottom: 0;
+    display: none;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
     position: absolute;
-    
+    width: 100vw;
+    z-index: 999999;
+}
+.modal-overlay.open {
+    display: flex;
+}
+.modal-close {
+    position: absolute;
+    top: .01rem;
+    right: 1rem;
+    padding: 1px;
+    border-radius: 16px;
+    color: white;
+    font-weight: 700;
+    transition: all 0.3s ease;
+
+}
+
+.modal-content{
+    background: white;
+    border-radius: 10px;
+    margin: auto;
+    max-width: 400 px;
+    padding: 8px;
+    position: relative;
+    z-index: 1000000;
+
 }
